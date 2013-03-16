@@ -53,7 +53,7 @@ foreach($animes as $anime) {
 		mkdir("manga/$anime/$volume");
 	}
 	
-	copy('_read.php', "manga/$anime/$volume/_read.php");
+	copy('reader.php', "manga/$anime/$volume/.reader.php");
 	
 	foreach ($ch as $key => $item) {
 		$raw = curl_multi_getcontent($item);
