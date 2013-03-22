@@ -3,7 +3,7 @@ ini_set('max_execution_time', 0);
 
 require "simple_html_dom.php";
 
-$animes = array('naruto', 'bleach', 'one-piece'); 
+$animes = array('naruto'/*, 'bleach', 'one-piece'*/); 
 $anime_keys = array(93, 94, 103); 
 $useproxy = false;
 
