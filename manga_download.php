@@ -4,12 +4,13 @@ ini_set('max_execution_time', 0);
 require "simple_html_dom.php";
 
 $animes = array('naruto', 'bleach', 'one-piece'); 
+$anime_keys = array(93, 94, 103); 
 $useproxy = false;
 
-foreach($animes as $anime) {
+foreach($animes as $keys => $anime) {
 
 	$curl = curl_init();
-	curl_setopt($curl, CURLOPT_URL, "http://www.mangareader.net/$anime");
+	curl_setopt($curl, CURLOPT_URL, "http://www.mangareader.net/".$anime_keys[$keys]."/".$anime.".html");
 	if ($useproxy) curl_setopt($curl, CURLOPT_PROXY, "localhost:8888");
 	curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
 	curl_setopt($curl, CURLOPT_FOLLOWLOCATION, 1);
